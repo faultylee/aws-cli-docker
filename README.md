@@ -16,6 +16,6 @@ You can run any commands available to the AWS CLI.
 
 ### Run commands with ECS tasks
 
-    docker-compose run --rm command ecs-run-task cluser-name-here task-name-here container here "php artisan db:seed"
+    docker-compose run --rm command ecs-run-task cluser-name-here task-name-here container-here "php artisan migrate"
 
     docker-compose run --rm aws ecs describe-tasks --cluster cluster-name-here --tasks task-id-here
