@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  aws:
+    environment:
+      AWS_ACCESS_KEY_ID: xxx
+      AWS_SECRET_ACCESS_KEY: xxx
+      AWS_DEFAULT_REGION: xxx
+
+  command:
+    environment:
+      AWS_ACCESS_KEY_ID: xxx
+      AWS_SECRET_ACCESS_KEY: xxx
+      AWS_DEFAULT_REGION: xxx

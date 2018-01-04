@@ -9,3 +9,7 @@ RUN apk --no-cache update && \
     rm -rf /var/cache/apk/*
 
 WORKDIR /data
+
+COPY ./commands /data
+
+ENV PATH /data:$PATH
