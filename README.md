@@ -1,5 +1,5 @@
 # AWS CLI Docker Container (/w Curl)
-Note: I forked this from [sekka1/aws-cli-docker]((https://github.com/sekka1/aws-cli-docker/) to add Curl into the image so I can use the same image in my build process
+Note: I forked this from [sekka1/aws-cli-docker](https://github.com/sekka1/aws-cli-docker/) to add Curl into the image so I can use the same image in my build process
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/faulty/aws-cli-docker.svg)](https://hub.docker.com/r/faulty/aws-cli-docker/)
 [![Docker Stars](https://img.shields.io/docker/stars/faulty/aws-cli-docker.svg)](https://hub.docker.com/r/faulty/aws-cli-docker/)
