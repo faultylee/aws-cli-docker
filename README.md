@@ -3,6 +3,7 @@ Note: I forked this from [sekka1/aws-cli-docker](https://github.com/sekka1/aws-c
 - `curl`
 - `jq`
 - `bash`
+- `wget` - replacing the busybox version
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/faultylee/aws-cli-docker.svg)](https://hub.docker.com/r/faultylee/aws-cli-docker/)
 [![Docker Stars](https://img.shields.io/docker/stars/faultylee/aws-cli-docker.svg)](https://hub.docker.com/r/faultylee/aws-cli-docker/)
