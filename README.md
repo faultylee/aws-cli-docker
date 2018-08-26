@@ -1,9 +1,10 @@
-# AWS CLI Docker Container (/w Curl)
+# AWS CLI Docker Container (/w extra tools)
 Note: I forked this from [sekka1/aws-cli-docker](https://github.com/sekka1/aws-cli-docker/) to add the following tools into the image so I can use the same image in my build process
 - `curl`
 - `jq`
 - `bash`
 - `wget` - replacing the busybox version
+- `psql`
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/faultylee/aws-cli-docker.svg)](https://hub.docker.com/r/faultylee/aws-cli-docker/)
 [![Docker Stars](https://img.shields.io/docker/stars/faultylee/aws-cli-docker.svg)](https://hub.docker.com/r/faultylee/aws-cli-docker/)
