@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Format string to "json array"
+command=`echo " "$4 | sed -r "s/ ([^ ]+)/ \"\\1\",/g"`
+
+# Remove last character
+command=`echo $command | sed 's/.$//'`
+
+aws ecs run-task --cluster $1 --task-definition $2 --launch-type FARGATE \
+    --network-configuration '{
+        "awsvpcConfiguration": {
+            "subnets": ["'$FARGATE_SUBNET'"],
+            "securityGroups": ["'$FARGATE_SECURITY_GROUP'"],
+            "assignPublicIp": "ENABLED"
+        }
+    }' \
+    --overrides '{
+        "containerOverrides": [{
+            "name": "'$3'",
+            "command": ['$command']
+        }]
+    }'

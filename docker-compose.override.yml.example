@@ -13,3 +13,5 @@ services:
       AWS_ACCESS_KEY_ID: xxx
       AWS_SECRET_ACCESS_KEY: xxx
       AWS_DEFAULT_REGION: xxx
+      FARGATE_SUBNET: xxx
+      FARGATE_SECURITY_GROUP: xxx
