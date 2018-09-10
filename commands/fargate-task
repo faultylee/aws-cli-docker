@@ -14,9 +14,4 @@ aws ecs run-task --cluster $1 --task-definition $2 --launch-type FARGATE \
             "assignPublicIp": "ENABLED"
         }
     }' \
-    --overrides '{
-        "containerOverrides": [{
-            "name": "'$3'",
-            "command": ['$command']
-        }]
-    }'
+    --overrides "{\"containerOverrides\": [{\"name\": \"$3\",\"command\": [$command]}]}"
