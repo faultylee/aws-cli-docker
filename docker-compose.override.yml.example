@@ -1,17 +1,20 @@
-version: '3'
+version: '3.6'
+
+x-base-test: &base
+  environment:
+    AWS_ACCESS_KEY_ID: xxx
+    AWS_SECRET_ACCESS_KEY: xxx
+    AWS_DEFAULT_REGION: xxx
+    FARGATE_SUBNET: xxx
+    FARGATE_SECURITY_GROUP: xxx
 
 services:
 
   aws:
-    environment:
-      AWS_ACCESS_KEY_ID: xxx
-      AWS_SECRET_ACCESS_KEY: xxx
-      AWS_DEFAULT_REGION: xxx
+    <<: *base
 
   command:
-    environment:
-      AWS_ACCESS_KEY_ID: xxx
-      AWS_SECRET_ACCESS_KEY: xxx
-      AWS_DEFAULT_REGION: xxx
-      FARGATE_SUBNET: xxx
-      FARGATE_SECURITY_GROUP: xxx
+    <<: *base
+
+  saw:
+    <<: *base

@@ -25,3 +25,7 @@ Run a command in a task using ECS Fargate. Requires the `FARGATE_SUBNET` and `FA
 Check task status
 
     docker-compose run --rm aws ecs describe-tasks --cluster cluster-name-here --tasks task-id-here
+
+Tail logs with `saw`:
+
+    docker-compose run --rm saw watch production
