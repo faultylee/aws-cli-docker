@@ -5,6 +5,8 @@ services:
   aws:
     build: .
     entrypoint: aws
+    volumes:
+      - './storage:/storage'
 
   command:
     build: .
