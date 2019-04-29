@@ -12,6 +12,19 @@ Using [Alpine linux](https://hub.docker.com/_/alpine/).
 
 You can run any commands available to the AWS CLI.
 
+## Prerequisites
+
+Add the following to your `~/.bashrc` or `~/.zshrc` file:
+
+    export AWS_ACCESS_KEY_ID=xxx
+    export AWS_SECRET_ACCESS_KEY=xxx
+    export AWS_DEFAULT_REGION=xxx
+
+To use the `fargate-task` command, also add these:
+
+    export FARGATE_SUBNET=xxx
+    export FARGATE_SECURITY_GROUP=xxx
+
 ## Example Usage
 
 Run a command in a task using ECS EC2

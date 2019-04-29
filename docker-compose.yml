@@ -1,18 +1,29 @@
 version: '3.6'
 
+x-base: &base
+  environment:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+    AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+    FARGATE_SUBNET: ${FARGATE_SUBNET}
+    FARGATE_SECURITY_GROUP: ${FARGATE_SECURITY_GROUP}
+
 services:
 
   aws:
+    <<: *base
     build: .
     entrypoint: aws
     volumes:
       - './storage:/storage'
 
   command:
+    <<: *base
     build: .
     volumes:
       - './commands:/data'
 
   saw:
+    <<: *base
     build: .
     entrypoint: saw
